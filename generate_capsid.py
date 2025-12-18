@@ -29,7 +29,7 @@ faces = np.array([
 def subdivide_face(v0, v1, v2, N):
     new_vertices = []
     new_faces = []
-    vertex_map = {}  # карта: (i, j, k) -> index
+    vertex_map = {}
 
     for i in range(N + 1):
         for j in range(N + 1 - i):
@@ -120,4 +120,5 @@ for idx, N in enumerate([1, 2, 3]):
 plt.tight_layout()
 plt.savefig("figures/comparison_N1_N2_N3.png", dpi=300, bbox_inches='tight')
 plt.close()
+
 
